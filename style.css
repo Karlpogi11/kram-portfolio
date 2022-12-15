@@ -1,0 +1,659 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+main {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+nav {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  background: #ffffff;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px 0 100px;
+}
+footer p {
+  text-align: center;
+  color: black;
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 40px;
+}
+
+.header-banner {
+  width: 100%;
+  height: 610px;
+  z-index: 10;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-image: url("/assets/cover-img.jpg");
+}
+
+.header-banner .txt {
+  font-size: 2vw;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+.dropdown{
+  position: relative;
+  z-index: 11;
+  display: inline-block;
+}
+.dropdown-menu{
+  
+position: absolute;
+width: 100%;
+display: none;
+left: 0;
+padding: 10px;
+background-color: #ffffff;
+top: 35px;
+border-radius:0 0 1rem 1rem;
+
+}
+.dropdown-menu a{
+  color: #000;
+ text-decoration: none;
+ font-size: 20px;
+ display:flex ;
+ flex-direction: column;
+}
+.dropdown-menu a:hover{
+  color: gray;
+}
+
+
+.dropdown:hover .dropdown-menu{
+  display: block;
+}
+
+.featured {
+  padding: 2rem 3%;
+  margin-top: 60px;
+  font-size: 2vw;
+  height: auto;
+}
+.featured-pic {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  object-fit: cover;
+  position: relative;
+}
+.featured-pic img {
+  width: 100%;
+  object-fit: cover;
+}
+.overlay {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  line-height: 60px;
+  left: 0;
+  font-size: 2rem;
+  padding: 20px;
+
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+}
+.overlay #p2 {
+  color: black;
+}
+.overlay #b2 {
+  background-color: #000;
+  color: #ffffff;
+}
+
+.cont {
+  position: relative;
+}
+
+.featured .featured-btn {
+  border-radius: 2em;
+  background-color: #ffffff;
+
+  padding: 0.5rem 2rem;
+  border: none;
+  cursor: pointer;
+  font-size: 50%;
+  color: black;
+  text-decoration: none;
+}
+.overlay p {
+  font-weight: 400;
+  color: white;
+}
+
+/* the latest */
+.the-latest {
+  padding: 2rem 3%;
+  margin-top: 60px;
+  font-size: 2vw;
+  height: auto;
+}
+.the-latest .cont {
+  width: 100%;
+}
+.the-latest .cont img {
+  width: 100%;
+}
+.the-latest #img2 {
+  display: none;
+}
+.capt {
+  text-align: center;
+}
+.capt p:first-child {
+  font-size: 1rem;
+}
+.capt p:nth-of-type(2) {
+  font-size: 4rem;
+  font-weight: 800;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+}
+.capt p:nth-of-type(3) {
+  font-size: 1rem;
+  padding-bottom: 30px;
+}
+.capt a {
+  border-radius: 2em;
+  background-color: black;
+  margin: 10px;
+  padding: 0.3rem 2rem;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.pre-header {
+  width: 100%;
+  height: 30px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.pre-header a {
+  color: black;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 8px 13px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+.pre-header a:hover {
+  color: gray;
+}
+.pre-header ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav .logo {
+  color: black;
+  font-size: 35px;
+  font-weight: 600;
+  cursor: pointer;
+  position: absolute;
+  left: 40px;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 5px;
+}
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+li a:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+  text-align: center;
+}
+nav ul :hover::after {
+  transform: scaleX(1);
+}
+.txt a {
+  border-radius: 2em;
+  background-color: black;
+  margin: 10px;
+  padding: 0.3rem 2rem;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+nav .menu-btn i {
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+
+/* carousel */
+img {
+  width: 100%;
+}
+.carousel {
+  width: 97%;
+  overflow: scroll;
+  overflow-y: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+.carousel_allpage {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  margin: 20px auto;
+ 
+}
+.carousel_allpage .back i {
+  color: #000;
+  margin-left: 2rem;
+}
+
+#crl-h2 {
+  padding-left: 3rem;
+  margin-top: 4rem;
+ display: flex;
+ align-items: center;
+gap: 20px;
+
+}
+#crl-h2 span {
+  width:60px;
+   height: 60px;
+ align-items: center;
+
+}
+.carousel__container {
+  white-space: nowrap;
+  margin: 10px 28px 10px;
+  position: relative;
+}
+
+.carousel__container_allpage {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 1px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  overflow: hidden;
+ 
+ 
+}
+.carousel-item {
+  background-color: #fff;
+  width: 400px;
+  height: auto;
+  overflow: hidden;
+  margin-right: 10px;
+  margin-bottom: 40px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+  
+}
+/* .carousel-item_men {
+  background-color: #fff;
+  width: 300px;
+  height: auto;
+  overflow: hidden;
+  margin-right: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+} */
+
+.carousel-item .info {
+  text-align: left;
+  line-height: 20px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+.carousel-item .info h3 {
+  color: #000;
+  padding-top: 10px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.carousel-item .info .price {
+  font-size: 13px;
+  color: black;
+  letter-spacing: 0.5px;
+  
+}
+
+.carousel__container:hover .carousel-item:hover {
+  transform: scale(1.09);
+  opacity: 1;
+}
+
+.carousel__container_allpage:hover .carousel-item:hover {
+  transform: scale(1.01 );
+  opacity: 1;
+}
+
+.carousel-item__img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+.carousel-item__img-all{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  
+}
+.carousel::-webkit-scrollbar {
+  height: 6px;
+}
+.carousel::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+.carousel::-webkit-scrollbar-track-piece {
+  max-width: 100px;
+}
+.carousel::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #fff;
+  background-image: -webkit-gradient(
+    linear,
+    40% 0%,
+    75% 84%,
+    from(#000000),
+    to(#000000),
+    color-stop(0.6, #000000)
+  );
+}
+
+/* main-page adidas yeezy */
+
+.adidas-yeezy {
+  margin: 10rem 2%;
+}
+
+.adidas-yeezy .capt p:nth-of-type(2) {
+  padding-bottom: 30px;
+}
+.adidas-yeezy #img2 {
+  display: none;
+}
+
+/* kids */
+
+#kids-ctgr{
+ padding-left: 4rem;
+  margin-top: 4rem;
+  font-size: 1.5rem;
+}
+
+/* footer */
+footer {
+  background-color: #111;
+  height: auto;
+  width: 100vw;
+  padding-top: 40px;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-content h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+  background-color: #111;
+  color: #fff;
+}
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+.socials li {
+  margin: 0 10px;
+}
+.socials a {
+  text-decoration: none;
+  color: #fff;
+}
+.socials a i {
+  font-size: 1.1rem;
+}
+.socials a:hover i {
+  color: darkgray;
+}
+.footer-bot {
+  background: #000;
+  width: 100vw;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer-bot p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+  background-color: #000;
+  color: #fff;
+}
+
+@media (max-width: 1000px) {
+  nav {
+    padding: 0 40px 0 50px;
+  }
+  nav ul {
+    gap: 10px;
+  }
+
+  .header-banner {
+    object-fit: contain;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  li a:after {
+    opacity: 0;
+  }
+  .header-banner .txt {
+    /* position: absolute;
+    bottom: -80px;
+    font-size: 20px; */
+    font-size: 4vw;
+    color: rgb(255, 255, 255);
+  }
+  .header-banner {
+    background-image: url("/assets/ci.jpg");
+    z-index: -1;
+    object-fit: cover;
+    height: 100vw;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .banner-btn {
+    background-color: #fdfdfd;
+    color: black;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 90px;
+    left: -100%;
+    background: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 35px 0;
+  }
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+  }
+  nav {
+    justify-content: flex-end;
+  }
+
+  img {
+    height: 80vh;
+    object-fit: cover;
+  }
+  .the-latest .capt {
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .the-latest #img2 {
+    display: block;
+    height: 90%;
+  }
+  .the-latest #img1 {
+    display: none;
+  }
+  .capt p:nth-of-type(2) {
+    line-height: 60px;
+    font-size: 3rem;
+  }
+  .capt p:nth-of-type(3) {
+    padding-bottom: 30px;
+  }
+
+  .overlay {
+    bottom: 0;
+  }
+  .featured .cont .overlay {
+    font-size: 5vw;
+  }
+
+  /* adidas-yeezy-mainpage */
+  .adidas-yeezy .capt {
+    text-align: left;
+  }
+  .adidas-yeezy #img2 {
+    display: block;
+  }
+  .adidas-yeezy #img1 {
+    display: none;
+  }
+
+  /* men-shop */
+
+  
+}
+@media (max-width: 600px) {
+  .carousel-item__img-all{
+    width: 100%;
+    height: 70%;
+    object-fit: contain;
+  }
+  .carousel__container_allpage {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+  }
+  .carousel-item {
+    width: 190px;
+    height: 100%;
+    margin: 10px auto;
+  }
+}
